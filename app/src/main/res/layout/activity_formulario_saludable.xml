@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioSaludableActivity">
+
+    <TextView
+        android:id="@+id/f_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_Titulo"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/f_titulo_seleccione_comida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="Seleccione el tipo de comida"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_titulo" />
+
+    <RadioGroup
+        android:id="@+id/f_rg_comidas"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_titulo_seleccione_comida"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/f_rb_comida_desayuno"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text="Desayuno"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_rb_comida_almuerzo"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:text="Almuerzo"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_rb_comida_merienda"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="Merienda"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_rb_comida_cena"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:text="Cena"
+            android:textColor="@color/purple_500" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/f_comida_principal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Comida Principal"
+        android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_rg_comidas"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/f_comida_secundaria"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Comida Secundaria"
+        android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_principal"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <EditText
+        android:id="@+id/f_comida_bebida"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Bebida"
+        android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_secundaria" />
+
+    <TextView
+        android:id="@+id/f_titulo_postre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="¿Ingerio Postre?"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_bebida" />
+
+    <RadioGroup
+        android:id="@+id/f_comida_rg_isPostre"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_titulo_postre"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/f_comida_rb_isPostreSi"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="Si"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_comida_rb_isPostreNo"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:text="No"
+            android:textColor="@color/purple_500" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/f_titulo_otroAlimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="¿Tenia tentacion de ingerir otro alimento?"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_postre"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <EditText
+        android:id="@+id/f_comida_postre"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Postre"
+        android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_rg_isPostre"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <RadioGroup
+        android:id="@+id/f_comida_rg_isTentacion"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_titulo_otroAlimento">
+
+        <RadioButton
+            android:id="@+id/f_comida_rb_isTentacionSi"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Si"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_comida_rb_isTentacionNo"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="No"
+            android:textColor="@color/purple_500" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/f_comida_tentacion"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="¿Que alimento queria ingerir?"
+        android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_rg_isTentacion"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <RadioGroup
+        android:id="@+id/f_comida_rg_isHambre"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_titulo_hambre"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/f_comida_rg_isHambreSi"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="Si"
+            android:textColor="@color/purple_500" />
+
+        <RadioButton
+            android:id="@+id/f_comida_rg_isHambreNo"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="No"
+            android:textColor="@color/purple_500" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/f_b_comida_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_rg_isHambre" />
+
+    <TextView
+        android:id="@+id/f_titulo_hambre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="¿Se quedó con hambre?"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_tentacion" />
+
+    <Button
+        android:id="@+id/f_b_volverLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Volver a Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_comida_rg_isHambre" />
+</androidx.constraintlayout.widget.ConstraintLayout>
